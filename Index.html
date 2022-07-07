@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>MI</title>
-</head>
-<body>
-    <div id="test">Hello World</div>
-</body>
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="logo.jpg"/>
+  <title>Black Hole Incremental</title>
+ </head>
+ <body>
+        <div id="masscounter">Your Black Hole has <span id="masscounterinner">10</span> Mass</div>
+    </div>
+    <div class="menu">
+      <button id="blackhole-btn" onclick="switchTab('tab-blackhole')">Black Hole</button>
+      <button id="hawking-btn" onclick="switchTab('tab-hawking')">Hawking</button>
+      <button id="research-btn" onclick="switchTab('tab-research')">Research</button>
+      <button id="settings-btn" onclick="switchTab('tab-settings')">Settings</button>
+    </div>
+    <div id="tab-blackhole" style="display:flex;" class="tab"></div>
+    <div id="tab-hawking" class="tab">
+      <div id="hawkingcounter">You have: <span id="hawkingcounterinner">10</span> Hawking Radiation<br>
+      Effect: <span id="hawkingeffectcounter">x8</span> More Mass</div>
+    
+      <button id="hawkingreset-btn" onclick="doHawkingsReset()">Reset for: <span id="hawkingnumber"></span> Hawking Radiation</button></div>
+      <div id="tab-research" class="tab">
+
+        <button id="researchreset-btn" onclick="doResearchReset()">Stabilize a Black Hole</button>
+        <div id="stholescounter">You have: <span id="stholescounterinner" style="color:black">0</span> Stabilized Black Holes</div>
+      
+     
+      
+      </div> 
+    
+    <div id="tab-settings" class="tab">
+      <button id="hardReser-btn" onclick="hardReset()">Hard Reset</button>
+      
+    </div>
+  <script src="decimal.js-master/decimal.js"></script>
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="notify.js"></script>
+  <script src="constants.js"></script>
+  <script src="util.js"></script>
+  <script src="upgrades.js"></script>
+  <script src="script.js"></script>
+  <script>
+ 
+   LOADING();
+  </script>
+ </body>
 </html>

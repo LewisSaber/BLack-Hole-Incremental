@@ -1,3 +1,133 @@
-#test{
-    color: red;
+#test {
+ color: red;
+}
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: #012a36;
+ font-size: 5vh;
+ 
+ 
+ padding: 1em;
+ padding-bottom: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+ overflow-y: hidden;
+ 
+ --color-text: white;
+ --button-color: 37, 13, 143;
+ --color-upgrade: var(--button-color);
+ --color-upgrade-maxed: 11, 153, 3;
+ color: var(--color-text);
+}
+#hawkingcounter,
+#masscounter {
+    width: 100%;
+ font-size: 1em;
+ text-align: center;
+ font-weight: 500;
+}#hawkingeffectcounter,
+#masscounterinner {
+ color: #04adcf;
+}
+
+#hawkingcounterinner {
+    color: yellow;
+   }
+.menu {
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: center;
+}
+#tab-research{
+    justify-content: center;
+}
+
+
+.menu button {
+ border-bottom-left-radius: 0px;
+ border-bottom-right-radius: 0px;
+ padding: 0.25em 0.75em;
+ font-size: 0.8em;
+ margin: 0.3em;
+}
+#blackhole-btn {
+ --this-color: 145, 7, 104;
+}
+#hawking-btn{
+    --this-color: 122, 8, 0;
+    display: none;
+}
+#research-btn{
+    --this-color: 245, 91, 2;
+    display: none;
+}
+#researchreset-btn{
+    --this-color: 0,0,0;
+}
+#stholescounter{
+    margin-left: 1em;
+}
+
+#hawkingreset-btn{
+    --this-color: 161, 13, 3;
+    width: 80%; 
+    margin-left: 10%;
+    margin-top: 0.6em;
+}
+#hawkingnumber{
+    color: yellow;
+}
+button {
+ --this-color: var(--button-color);
+ background: rgb(var(--this-color));
+ color: var(--color-text);
+ border: 0px;
+ border-radius: 0.5em;
+ padding: 0.25em 0.5em;
+ box-shadow: 0.25em 0.25em 0 rgba(var(--this-color), 0.5);
+ cursor: pointer;
+ font-size: 0.85em;
+}
+button:hover {
+ filter: brightness(1.2);
+}
+.tab {
+ display: none;
+ flex-direction: column;
+ flex-flow: row wrap;
+ align-items: stretch;
+ flex-grow: 1;
+ overflow-y: hidden;
+}
+.upgrade p {
+    text-align: center;
+    margin: 0.3em 0 0.2em 0 ;
+}
+.upgrade {
+    --this-rgb: var(--color-upgrade);
+    background: rgba(var(--this-rgb));
+    border-radius: 0.5em;
+    padding: 0.2em;
+    box-shadow: 0.25em 0.25em 0 rgba(var(--this-rgb), 0.5);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 0.5em;
+    margin: 0.5em;
+    width: 30%;
+    height: 7em;
+}
+#hardReser-btn{
+    --this-color: 163, 5, 34;
+    width: 30%;
+    margin: 1%;
+    float: left;
+}
+.upgrade-maxed{
+    filter: none;
+    --this-rgb: var(--color-upgrade-maxed);
+}
+button:disabled {
+    filter: brightness(0.7);
+    cursor: auto;
 }
