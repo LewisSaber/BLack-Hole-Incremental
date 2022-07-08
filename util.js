@@ -32,12 +32,12 @@ function save(isHardReset = false) {
       }
     }
 
- localStorage.setItem("theMIsave", JSON.stringify(game));
+ localStorage.setItem("theBHIsave", JSON.stringify(game));
 }
 
 function load() {
  reset();
- let loadgame = JSON.parse(localStorage.getItem("theMIsave"));
+ let loadgame = JSON.parse(localStorage.getItem("theBHIsave"));
  if (loadgame != null) {
   game = loadObject(game, loadgame,true);
   for(const key in Upgrades){
