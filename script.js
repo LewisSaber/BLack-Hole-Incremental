@@ -176,7 +176,7 @@ function massPerSecond() {
   )
   .mul(Decimal(perUpgrade.massUpgrade2 +
     perUpgrade.hawkingUpgrade3 * Upgrades.hawkingUpgrade3.getAmount()).pow(Upgrades.massUpgrade2.getAmount()))
-  .mul(game.mass.plus(10).log(3).pow(2**(Upgrades.massUpgrade6.getAmount())))
+  .mul(game.mass.plus(10).log(3).pow(2**(Upgrades.massUpgrade6.getAmount())).pow(Upgrades.massUpgrade3.getAmount()))
   .mul(getHawkingMassEffect())
   .mul(1e10**Upgrades.hawkingUpgrade4.getAmount());
 }
