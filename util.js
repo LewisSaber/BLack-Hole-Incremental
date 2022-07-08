@@ -9,7 +9,7 @@ function loadObject(Original, LoadOne,isDecimal = false) {
   }
 
  function internal(key) {
-  if (typeof LoadOne[key] == "object") {
+  if (typeof LoadOne[key] == "object" &&  !(LoadOne[key] instanceof Date)) {
    Original[key] = loadObject(Original[key], LoadOne[key]);
   } else {
    if (typeof LoadOne[key] == "string" && isDecimal) {
@@ -39,6 +39,8 @@ function load() {
  reset();
  let loadgame = JSON.parse(localStorage.getItem("theBHIsave"));
  if (loadgame != null) {
+  if(loadgame.researchresetstart)
+  loadgame.researchresetstart = new Date(loadgame.researchresetstart)
   game = loadObject(game, loadgame,true);
   for(const key in Upgrades){
     Upgrades[key].load(game.upgrades[key])

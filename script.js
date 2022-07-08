@@ -17,6 +17,8 @@ function reset() {
   hawkingresets: 0,
   researchresets: 0,
   stholes: Decimal(0),
+  researchresetstart: new Date(),
+  bestresearchresettime: 0,
   
 
   upgrades: {},
@@ -278,5 +280,14 @@ function doResearchReset(){
     Upgrades.hawkingUpgrade4.load(0);
     Upgrades.hawkingUpgrade5.load(0);
     Upgrades.hawkingUpgrade6.load(0);
+
+const end = new Date()
+const besttime = end - game.researchresetstart
+if(besttime < game.bestresearchresettime || game.bestresearchresettime == 0){
+  game.bestresearchresettime = besttime
+}
+ 
+game.researchresetstart = new Date()
+
   }
 }
